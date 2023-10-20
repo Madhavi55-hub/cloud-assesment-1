@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic calculator</title>
+    <link rel="stylesheet" type="text.css" href="calculator.css">
+
+    <style>
+.calculator
+{
+    width:220px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align:center;
+    background-color: darkolivegreen;
+    
+}
+.input[type="text"]
+{
+    width:10%;
+    height:40px;
+    margin:0px 0;
+  
+
+}
+.grid
+{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:3px;
+    background-color: black;
+}
+.button
+{
+    width:80%;
+    height:100px;
+    font-size:30px;
+    background-color: green;
+}
+    </style>
+
+    <script>
+    function appendToDisplay(value)
+        {
+            document.getElementById("display").value+=value;
+        }
+    function clearDisplay()
+        {
+            document.getElementById("display").value='';
+        }
+    function calculate()
+        {
+        try
+            {
+const result=eval(document.getElementById("display").value);
+document.getElementById("display").value=result;
+        }
+        catch(error)
+            {
+                document.getElementById("display").value='Error';
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <button onclick="clearDisplay('AC')" style="background-color: greenyellow;">AC</button>
+        <div class="grid" style="color:white">
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('+')" style="background-color: rgb(204, 201, 201);">+</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')" style="background-color: rgb(204, 201, 201);">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('*')" style="background-color: rgb(204,201,201);">*</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="appendToDisplay('0')">0</button>
+
+            <button onclick="calculate()" style="background-color: rgb(43, 220, 226);">=</button>
+            <button onclick="appendToDisplay('/')" style="background-color: rgb(204,201,201);">/</button>
+
+        </div> </div>
+        <script src="calculator.js"></script>
+    
+</body>
+</html>

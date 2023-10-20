@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey form</title>
+    <script>
+         function Display()
+         {
+         
+         var fname=document.getElementById("FirstName");
+         var lname=document.getElementById("LastName");
+         var dob=document.getElementById("DateofBirth");
+         var profession=document.getElementById("Profession");
+         var email=document.getElementById("Email");
+         var mobilenumber=document.getElementById("MobileNumber");
+        
+         var FirstName=fname.value;
+         var LastName=lname.value;
+         var DateofBirth=dob.value;
+         var Profession=profession.value;
+         var Email=email.value;
+         var MobileNumber=mobilenumber.value;
+         window.alert("FirstName:"+FirstName+"\n LastName:"+LastName+"\n dob:"+DateofBirth+"\n profession:"+Profession+
+         "\n Email:"+Email+"\n MobileNumber:"+MobileNumber
+         );
+    }
+</script>
+     </head>
+
+<body>
+
+<form>
+    <fieldset style="background-color: rgb(113, 164, 189);height:900px;width:700px;margin-left:300px;">
+            <center style="color:aliceblue"><big><big><big><b>Customer Survey Form</b></big></big></big>
+                </center>
+                <br>
+                <center></center>
+                <fieldset style="background-color:white;height:700px;width:550px;margin-left:70px;">
+                <br>
+            <tr>
+                <label>FirstName<sup>*</sup>:
+                    <input title="please enter your first name" id="FirstName">
+                </label>
+
+                <label>LastName<sup>*</sup>:
+                    <input title="please enter your last name" id="LastName">
+                </label>
+                </tr>
+                 <br><br> 
+                <tr>
+                    <td>DateofBirth<sup>*</sup></td>
+                    <td>:</td>
+                    <td><input id="DateofBirth"></td>
+                </tr>
+                 <br><br> 
+                <tr>
+                    <label>PhoneNumber<sup>*</sup>:
+                        <input title="max 10 characters should be present" id="MobileNumber">
+                    </label>
+                </tr>
+                <br><br>
+                <tr>
+                   <label>Gender<sup>*</sup>:
+                    <input type="checkbox" onclick="check">Male
+                    <input type="checkbox" onclick="check1">Female
+                </label>
+                </tr>
+                 <br><br> 
+                <tr>
+                    <label>Mail<sup>*</sup>:
+            <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+             title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+              id="Email">
+                    </label>
+                </tr>
+                <br><br> 
+                <tr>
+                <label>Profession<sup>*</sup>:
+                    <input id="Profession" ></label>
+                </tr>
+                <br><br> 
+                <tr>
+                    <td>Country<sup>*</sup></td>
+                    <td>:</td>
+                    <td><input list="abc" placeholder="select">
+                    <datalist id="abc">
+                    <option>Afghanistan</option>
+                    <option>Belgium</option>
+                    <option>bangkok</option>
+                    <option>Canada</option>
+                    <option>Dubai</option>
+                    <option>England</option>
+                    <option>Guniea</option>
+                    <option>HongKong</option>
+                    <option>India</option>
+                    <option>Italy</option>
+                    <option>Korea</option>
+                    <option>Kenya</option>
+                    <option>Liberia</option>
+                    <option>Libya</option>
+                    <option>Malaysia</option>
+                    <option>Nepal</option>
+                    <option>Nigeria</option>
+                    <option>Oman</option>
+                    <option>Pakistan</option>
+                    <option>peru</option>
+                    <option>Quatar</option>
+                    <option>Romania</option>
+                    <option>Russia</option>
+                    <option>Singapore</option>
+                    <option>Turkey</option>
+                    <option>Uganda</option>
+                    <option>Vietnam</option>
+                    <option>Zimbabve</option>
+                    </datalist>
+                </td>
+                </tr>
+                 <br><br> 
+            <tr> 
+            <td>Is this first time your using our products and services?<sup>*</sup></td>
+                <td></td>
+                <br>
+                <td><input type="radio" type="abc">Yes <input type="radio" type="abc">No</td>
+                 </tr>
+                 <br><br> 
+            <tr>
+            <td>Would u suggestion to your friend and collegue?<sup>*</sup></td>
+                    <td></td>
+                    <br>
+                    <td><input type="radio" type="abc">Yes<input type="radio" type="abc">No</td>
+                 </tr>
+                 <br><br>
+            <tr>
+            <td>How satisfied are you with our company loverall?<sup>*</sup></td>
+                    <td></td><br>
+            
+                    <td><input type="radio" type="abc">satisfied<input type="radio" type="abc">undecided
+                        <input type="radio" type="abc">unsatisfied</td>
+                 </tr>
+            <br><br>
+            <tr>
+                <td>Do you have suggestion to improve our service?</td>
+                <td></td><br><br>
+                <td></td><input type="text" style="height:100px;width:500px"></td>
+            </tr>
+            <br><br>
+            
+            <td></td>
+            <td></td>
+     <td><input type="submit" style="color:white;background-color: rgb(0, 140, 255);" value="submit" onclick="Display()"></td>
+            
+            <td></td>
+            <td></td>
+            <td><input type="reset" style="color:white;background-color: rgb(0, 140, 255);" value="reset" onclick=""></td>
+            </fieldset>
+            </center>
+            <center style="color:aliceblue;text-align:left;margin-left:100px;">
+            <h5 style="margin-left:10px;">@2018 Customer Survey Form.All Rights Reserved |Design By |
+                <h7 style="color: blue;">W3Layouts</h7>
+            </h5>
+        </center>
+    </fieldset>
+    </form>
+</body>
+</html>
+
